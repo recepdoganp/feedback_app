@@ -9,7 +9,7 @@ function FeedbackForm() {
   const [rating, setRating] = useState(0);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
-  const { addFeedback, feedbackEdit, updateFeedback } =
+  const { addFeedback, feedbackEdit, updateFeedback, resetFeedbackEdit } =
     useContext(FeedbackContext);
 
   useEffect(() => {
@@ -52,7 +52,10 @@ function FeedbackForm() {
         addFeedback(newFeedback);
       }
 
+      resetFeedbackEdit();
+
       setText("");
+      setBtnDisabled(true);
     }
   };
 
@@ -69,7 +72,7 @@ function FeedbackForm() {
             value={text}
           />
           <Button type='submit' isDisabled={btnDisabled}>
-            Send
+            {feedbackEdit.edit ? "Update" : "Send"}
           </Button>
         </div>
         {message && <div className='message'>{message}</div>}
