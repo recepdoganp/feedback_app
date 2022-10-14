@@ -18,4 +18,4 @@ Otherwise using the command
 npm run server
 ```
 
-you can initiate the JSON-Server and access the UI via [Link](https://sunny-croissant-341f86.netlify.app/)
+you can initiate the JSON-Server and access the UI via [Link](https://rdpfeedbackapp.netlify.app/)
