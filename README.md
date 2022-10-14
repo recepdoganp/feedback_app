@@ -6,13 +6,17 @@ In order to run the application correctly, make sure you have installed all the 
 
 In the project directory, you should run:
 
+## Option 1
+
 ```bash
 npm run dev
 ```
 
-in order to run concurrently both the UI and the server itself.
+in order to run concurrently both the UI and the server itself in developer mode.
 
-Otherwise using the command
+## Option 2
+
+Otherwise using the command:
 
 ```bash
 npm run server
